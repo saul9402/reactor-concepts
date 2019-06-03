@@ -30,6 +30,10 @@ public class SpringBootReactorApplication implements CommandLineRunner {
 
 		List<String> nombresList = Arrays.asList("Saul", "Isis", "Avila", "Tolentino", "Vidal", "Oliver", "Nadyeli");
 
+		/**
+		 * También se puede crear flujos de datos apartir de listas... basicamente
+		 * cualquier objecto que implemente Iterable
+		 */
 		Flux<String> nombresFlux = Flux.fromIterable(nombresList);
 
 		Flux<Usuario> usuarios = nombresFlux
